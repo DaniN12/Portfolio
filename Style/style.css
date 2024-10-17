@@ -1,0 +1,449 @@
+/* Aplicamos la animación a todo el body */
+body {
+    font-family: 'Montserrat', sans-serif; /* Cambia la fuente a Montserrat */
+    line-height: 1.6;
+    color: #333;
+    animation: cambiarColorFondo 10s infinite; /* Duración de 10 segundos y en bucle */
+    transition: background-color 0.5s ease-in-out; /* Transición suave entre los colores */
+}
+
+/* Encabezado */
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Coloca el encabezado en la parte superior */
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.9); /* Fondo semi-transparente */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* Cambia el peso de la fuente */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Sección de introducción */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado azul a violeta */
+    color: white; /* Cambiamos el texto a blanco */
+    margin-top: 60px; /* Ajusta el margen superior para que no se superponga con el encabezado fijo */
+}
+
+#intro h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: 600;
+    color: white; /* Mantener el h2 del intro en blanco */
+}
+
+#intro p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2.5s ease-in-out;
+    color: #f0f0f0; /* Texto del párrafo en blanco humo */
+}
+
+/* Botón */
+#intro .btn {
+    background: white;
+    color: #ac75ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600; /* Cambia el peso de la fuente */
+    transition: background 0.3s, color 0.3s;
+}
+
+#intro .btn:hover {
+    background: #ac75ff;
+    color: white;
+}
+
+/* Sección de proyectos */
+#proyectos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.proyecto {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto h3 {
+    font-size: 1.8rem;
+    color: #ac75ff;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    text-align: center; /* Centramos el texto */
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.proyecto a.btn {
+    display: inline-block;
+    background: #ac75ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.proyecto a.btn:hover {
+    background: #e65c4f;
+}
+
+/* Sección de habilidades */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de contacto */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo general de los h2 */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+    color: #8e44ad; /* Morado para todos los h2 excepto el de #intro */
+}
+
+/* Estilo específico para el h2 de la sección #intro */
+#intro h2 {
+    color: white; /* Color blanco solo para el h2 del intro */
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #ac75ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ac75ff;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(51, 51, 51, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #acacff; /* Color más claro para el enlace */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia a blanco puro al hacer hover */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de fondo */
+@keyframes fondoAnimado {
+    0% {
+        background-color: #ff6f61; /* Color inicial */
+    }
+    25% {
+        background-color: #6f61ff; /* Color secundario */
+    }
+    50% {
+        background-color: #61ffb3; /* Color terciario */
+    }
+    75% {
+        background-color: #ff61b6; /* Color cuaternario */
+    }
+    100% {
+        background-color: #ff6f61; /* Vuelve al color inicial */
+    }
+}
+
+/* Animación para el cuerpo */
+body {
+    animation: fondoAnimado 10s infinite; /* Fondo animado */
+}
+
+/* Estilo para el H1 clickable */
+.clickable {
+    color: white; /* Color inicial del H1 */
+}
+/* Aplicamos la imagen de fondo */
+body {
+    font-family: 'Montserrat', sans-serif; /* Cambia la fuente a Montserrat */
+    line-height: 1.6;
+    color: #333;
+    background-image: url('Images/Fondo.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    transition: background-color 0.5s ease-in-out; /* Transición suave entre los colores */
+}
+
+/* Encabezado */
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Coloca el encabezado en la parte superior */
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.9); /* Fondo semi-transparente */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* Cambia el peso de la fuente */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Sección de introducción */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.5), rgba(37, 117, 252, 0.5)); /* Degradado azul a violeta con transparencia */
+    color: white; /* Cambiamos el texto a blanco */
+    margin-top: 60px; /* Ajusta el margen superior para que no se superponga con el encabezado fijo */
+}
+
+#intro h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: 600;
+    color: white; /* Mantener el h2 del intro en blanco */
+}
+
+#intro p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2.5s ease-in-out;
+    color: #f0f0f0; /* Texto del párrafo en blanco humo */
+}
+
+/* Botón */
+#intro .btn {
+    background: white;
+    color: #ac75ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600; /* Cambia el peso de la fuente */
+    transition: background 0.3s, color 0.3s;
+}
+
+#intro .btn:hover {
+    background: #ac75ff;
+    color: white;
+}
+
+/* Sección de proyectos */
+#proyectos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.proyecto {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de habilidades */
+#habilidades {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de contacto */
+#contacto {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cambia el color al hacer clic */
+.clickable:active {
+    color: #ac75ff; /* Color morado claro al hacer clic */
+}

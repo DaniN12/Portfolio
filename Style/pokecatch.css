@@ -1,0 +1,158 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto para un aspecto más elegante */
+    line-height: 1.6;
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado de fondo */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61; /* Color al pasar el ratón */
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilos para secciones */
+section {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Efecto al pasar el ratón */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los proyectos */
+.proyecto {
+    margin: 15px 0;
+    padding: 20px;
+    border-left: 4px solid #6a11cb; /* Línea a la izquierda del proyecto */
+}
+
+.proyecto h3 {
+    margin-bottom: 10px;
+    color: #6a11cb; /* Color para los títulos de los proyectos */
+}
+
+/* Sección de video */
+.video-container {
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar el contenedor */
+    overflow: hidden; /* Ocultar el desbordamiento si hay */
+}
+
+.video-container video {
+    width: 100%; /* Ancho del video al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #6a11cb; /* Color de fondo */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s; /* Transiciones */
+}
+
+.btn:hover {
+    background: #ff6f61; /* Color al pasar el ratón */
+    transform: scale(1.05); /* Escalado al pasar el ratón */
+}
+
+/* Sección de contacto */
+#contacto {
+    text-align: center;
+}
+
+#contacto a.btn {
+    margin-top: 20px; /* Espaciado adicional para el botón de contacto */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de fondo */
+@keyframes fondoAnimado {
+    0% {
+        background-color: #ff6f61; /* Color inicial */
+    }
+    25% {
+        background-color: #6f61ff; /* Color secundario */
+    }
+    50% {
+        background-color: #61ffb3; /* Color terciario */
+    }
+    75% {
+        background-color: #ff61b6; /* Color cuaternario */
+    }
+    100% {
+        background-color: #ff6f61; /* Vuelve al color inicial */
+    }
+}
+
+/* Animación para el cuerpo */
+body {
+    animation: fondoAnimado 10s infinite; /* Fondo animado */
+}
